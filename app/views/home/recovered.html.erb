@@ -1,0 +1,24 @@
+<%= link_to "Retornar", root_path %>
+<table>
+	<caption>Recuperados</caption>
+	<thead>
+		<td>País</td>
+		<td>Cidade</td>
+		<td>Confirmados</td>
+		<td>Última Atualização</td>
+	</thead>
+	<tbody>
+		<% @recovered.each do |r| %>
+			
+			<tr>
+				<td><%= r['countryRegion'] %></td>
+				<td><%= r['provinceState'] %></td>
+				<td><%= r['confirmed'] %></td>
+				<td><%= Time.at(r['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
+			</tr>
+
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to "Retornar", root_path %>

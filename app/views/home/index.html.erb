@@ -1,0 +1,9 @@
+<h1>Dados Atualizados da COVID-19</h1>
+
+<p>Confirmados: <%= @summary['confirmed']['value'] %></p>
+<p>Recuperados: <%= @summary['recovered']['value'] %></p>
+<p>Mortos: <%= @summary['deaths']['value'] %></p>
+
+<%= link_to "Confirmados", confirmados_path %>
+<%= link_to "Recuperados", recuperados_path %>
+<%= link_to "Mortos", mortos_path %>
