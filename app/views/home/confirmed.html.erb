@@ -1,21 +1,21 @@
-<table>
+<table class="table table-striped">
 	<caption>Confirmados</caption>
-	<thead>
-		<td>País</td>
-		<td>Cidade</td>
-		<td>Confirmados</td>
-		<td>Última Atualização</td>
-	</thead>
-	<tbody>
-		<% @confirmed.each do |c| %>
-			
-			<tr>
-				<td><%= c['countryRegion'] %></td>
-				<td><%= c['provinceState'] %></td>
-				<td><%= c['confirmed'] %></td>
-				<td><%= Time.at(c['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
-			</tr>
-
-		<% end %>
-	</tbody>
+  <thead>
+    <tr class="text-center">
+      <th scope="col">País</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">Confirmados</th>
+      <th scope="col">Última Atualização</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @confirmed.each do |c| %>
+	    <tr class="text-center">
+			 <td><%= c['countryRegion'] %></td>
+			 <td><%= c['provinceState'] %></td>
+			 <td><%= c['confirmed'] %></td>
+			 <td><%= Time.at(c['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
+		</tr>
+	<% end %>
+  </tbody>
 </table>

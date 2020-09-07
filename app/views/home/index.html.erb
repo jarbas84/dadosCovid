@@ -1,5 +1,6 @@
-<h1>Dados Atualizados da COVID-19</h1>
-
-<p>Confirmados: <%= @summary['confirmed']['value'] %></p>
-<p>Recuperados: <%= @summary['recovered']['value'] %></p>
-<p>Mortos: <%= @summary['deaths']['value'] %></p>
+<div class="jumbotron">
+  <h1 class="display-4">Dados Atualizados da COVID-19</h1>
+  <p class="lead">Confirmados: <span class="confirmed"><%= @summary['confirmed']['value'] %></span></p>
+  <p class="lead">Recuperados: <span class="recovered"><%= @summary['recovered']['value'] %></span></p>
+  <p class="lead">Mortos: <span class="deaths"><%= @summary['deaths']['value'] %></span></p>
+</div>

@@ -1,21 +1,23 @@
-<table>
+<table class="table table-striped">
 	<caption>Por Dia</caption>
-	<thead>
-		<td>Total Confirmado</td>
-		<td>País: China</td>
-		<td>País: Fora da China</td>
-		<td>Última Atualização</td>
-	</thead>
-	<tbody>
-		<% @daily.each do |c| %>
+  <thead>
+    <tr class="text-center">
+      <th scope="col">Total Confirmado</th>
+      <th scope="col">País: China</th>
+      <th scope="col">País: Fora da China</th>
+      <th scope="col">Última Atualização</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @daily.each do |c| %>
 			
-			<tr>
+			<tr class="text-center">
 				<td><%= c['confirmed']['total'] %></td>
 				<td><%= c['confirmed']['china'] %></td>
 				<td><%= c['confirmed']['outsideChina'] %></td>
 				<td><%= c['reportDate'] %></td>
 			</tr>
 
-		<% end %>
-	</tbody>
+	<% end %>
+  </tbody>
 </table>

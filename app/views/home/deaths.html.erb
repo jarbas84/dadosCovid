@@ -1,21 +1,21 @@
-<table>
+<table class="table table-striped">
 	<caption>Mortos</caption>
-	<thead>
-		<td>País</td>
-		<td>Cidade</td>
-		<td>Confirmados</td>
-		<td>Última Atualização</td>
-	</thead>
-	<tbody>
-		<% @deaths.each do |d| %>
-			
-			<tr>
-				<td><%= d['countryRegion'] %></td>
-				<td><%= d['provinceState'] %></td>
-				<td><%= d['confirmed'] %></td>
-				<td><%= Time.at(d['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
-			</tr>
-
-		<% end %>
-	</tbody>
+  <thead>
+    <tr class="text-center">
+      <th scope="col">País</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">Confirmados</th>
+      <th scope="col">Última Atualização</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @deaths.each do |d| %>
+	    <tr class="text-center">
+			<td><%= d['countryRegion'] %></td>
+			<td><%= d['provinceState'] %></td>
+			<td><%= d['confirmed'] %></td>
+			<td><%= Time.at(d['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
+		</tr>
+	<% end %>
+  </tbody>
 </table>
