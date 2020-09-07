@@ -23,6 +23,10 @@ class GlobalSummary
     self.class.get("/daily", @options)
   end
 
+  def countries
+    self.class.get("/countries", @options)
+  end
+
   private
   def set_global_summary_service
     @summary_service = GlobalSummary.new

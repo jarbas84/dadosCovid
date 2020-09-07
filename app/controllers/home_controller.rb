@@ -20,6 +20,10 @@ class HomeController < ApplicationController
     @daily = @summary_service.daily
   end
 
+  def countries
+    @countries = @summary_service.countries
+  end
+
   def set_global_summary_service
   	@summary_service = GlobalSummary.new
   end

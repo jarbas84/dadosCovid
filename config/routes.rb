@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/recuperados', action:'recovered', controller: 'home'
   get '/mortos', action:'deaths', controller: 'home'
   get '/por-dia', action:'daily', controller: 'home'
+  get '/paises', action:'countries', controller: 'home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
