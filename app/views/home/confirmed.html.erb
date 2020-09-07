@@ -14,7 +14,7 @@
 			 <td><%= c['countryRegion'] %></td>
 			 <td><%= c['provinceState'] %></td>
 			 <td><%= c['confirmed'] %></td>
-			 <td><%= Time.at(c['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S') %></td>
+			 <td><%= link_to Time.at(c['lastUpdate'].to_i/1000).strftime('%d/%m/%Y %H:%M:%S'), "por-data/#{(Time.at(c['lastUpdate'].to_i/1000).strftime('%d-%m-%Y'))}" %></td>
 		</tr>
 	<% end %>
   </tbody>

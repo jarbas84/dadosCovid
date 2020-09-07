@@ -19,7 +19,6 @@ class HomeController < ApplicationController
   def daily
     @daily = @summary_service.daily
   end
-
   def countries
     @countries = @summary_service.countries
   end
