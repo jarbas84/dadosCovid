@@ -19,6 +19,10 @@ class GlobalSummary
     self.class.get("/deaths", @options)
   end
 
+  def daily
+    self.class.get("/daily", @options)
+  end
+
   private
   def set_global_summary_service
     @summary_service = GlobalSummary.new

@@ -16,6 +16,10 @@ class HomeController < ApplicationController
   	@deaths = @summary_service.deaths
   end
 
+  def daily
+    @daily = @summary_service.daily
+  end
+
   def set_global_summary_service
   	@summary_service = GlobalSummary.new
   end

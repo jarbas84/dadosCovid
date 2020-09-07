@@ -1,0 +1,21 @@
+<table>
+	<caption>Por Dia</caption>
+	<thead>
+		<td>Total Confirmado</td>
+		<td>País: China</td>
+		<td>País: Fora da China</td>
+		<td>Última Atualização</td>
+	</thead>
+	<tbody>
+		<% @daily.each do |c| %>
+			
+			<tr>
+				<td><%= c['confirmed']['total'] %></td>
+				<td><%= c['confirmed']['china'] %></td>
+				<td><%= c['confirmed']['outsideChina'] %></td>
+				<td><%= c['reportDate'] %></td>
+			</tr>
+
+		<% end %>
+	</tbody>
+</table>
