@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-  	<% @daily.each do |c| %>
+  	<% @daily.sort_by {|k,v| v}.reverse.each do |c| %>
 			
 			<tr class="text-center">
 				<td><%= c['confirmed']['total'] %></td>

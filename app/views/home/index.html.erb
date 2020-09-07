@@ -1,6 +1,15 @@
 <div class="jumbotron">
   <h1 class="display-4">Dados Atualizados da COVID-19</h1>
-  <p class="lead">Confirmados: <span class="confirmed"><%= @summary['confirmed']['value'] %></span></p>
-  <p class="lead">Recuperados: <span class="recovered"><%= @summary['recovered']['value'] %></span></p>
-  <p class="lead">Mortos: <span class="deaths"><%= @summary['deaths']['value'] %></span></p>
+  <p class="lead">
+  	<%= link_to "Confirmados", confirmados_path, class:'none confirmed' %>
+  	<span class="confirmed"><%= @summary['confirmed']['value'] %></span>
+  </p>
+  <p class="lead">
+  	<%= link_to "Recuperados", recuperados_path, class:'none recovered' %>
+  	<span class="recovered"><%= @summary['recovered']['value'] %></span>
+  </p>
+  <p class="lead">
+  	<%= link_to "Mortos", mortos_path, class:'none deaths' %>
+  	<span class="deaths"><%= @summary['deaths']['value'] %></span>
+  </p>
 </div>
